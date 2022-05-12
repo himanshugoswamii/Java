@@ -1,0 +1,137 @@
+package Session9;
+
+import java.util.Scanner;
+
+class Account{
+	protected int id;
+	protected String name;
+	protected int bal;
+	
+	public void read(int i, String n, int b){
+		id=i;
+		name=n;
+		bal=b;
+	}
+	
+	 public void withdraw(int amount){
+	    if(bal>=amount){
+	    	bal=bal - amount;
+	    }
+	    else{
+	    	System.out.println("Invalid");
+	    }
+	}
+	 
+	 public void deposit(int amount){
+		 bal=bal+amount;
+	 }
+	 
+	 public void checkbalance(){
+		 System.out.println("ID is "+id);
+		 System.out.println("Name is "+name);
+		 System.out.println("Balance in account is "+bal);
+	 }
+}
+
+class Savings extends Account{
+	private double rate=0.06;
+	
+	public void checkinterest(){
+		double r=bal*rate;
+		System.out.println("Interest at the end of the year is "+r);
+	}
+}
+class Current extends Account{
+	private int penalty =200;
+	
+	public void checkpenalty(){
+		if(bal<5000){
+			bal=bal-penalty;
+			System.out.println("You got a penalty of "+penalty);
+		}
+		else{
+			System.out.println("You have got no penalty");
+		}
+	}
+}
+   
+
+public class BankProject {
+	
+	public static void main(String[] args) {
+		System.out.println("Enter \n 1 for Saving \n 2 for Current");
+		Scanner sc =new Scanner(System.in);
+		int x=sc.nextInt();
+		System.out.println("Enter account id,Name and Balance ");
+		int id =sc.nextInt();
+		String name=sc.next();
+		int b=sc.nextInt();
+		if(x==1){
+			Savings s =new Savings();
+			s.read(id,name,b);
+			int c=0;
+			while(c!=5){
+				System.out.println("1 for Withdrawal");
+				System.out.println("2 for Deposit");
+				System.out.println("3 for Check Balance");
+				System.out.println("4 for Check Interest");
+				System.out.println("5 for Exit");
+				c=sc.nextInt();
+				if (c==1){
+					System.out.println("Enter amount to be withdrawn");
+					int a=sc.nextInt();
+					s.withdraw(a);
+				}
+				else if(c==2){
+					System.out.println("Enter amount to be deposited ");
+					int a=sc.nextInt();
+					s.deposit(a);
+				}
+				else if(c==3){
+					s.checkbalance();
+				}
+				else if(c==4){
+					s.checkinterest();
+				}
+				else if(c==5){
+					break;
+				}
+			}
+		}
+		else{
+			Current c1 =new Current();
+			c1.read(id, name, b);
+			int c=0;
+			while(c!=5){
+				System.out.println("1 for Withdrawal");
+				System.out.println("2 for Deposit");
+				System.out.println("3 for Check Balance");
+				System.out.println("4 for Check Penalty");
+				System.out.println("5 for Exit");
+				c=sc.nextInt();
+				if (c==1){
+					System.out.println("Enter amount to be withdrawn");
+					int a=sc.nextInt();
+					c1.withdraw(a);
+				}
+				else if(c==2){
+					System.out.println("Enter amount to be deposited ");
+					int a=sc.nextInt();
+					c1.deposit(a);
+				}
+				else if(c==3){
+					c1.checkbalance();
+				}
+				else if(c==4){
+					c1.checkpenalty();
+				}
+				else if(c==5){
+					break;
+				}
+			}
+			
+		}
+		
+	}
+
+}

@@ -1,0 +1,219 @@
+package Session18;
+
+import java.util.*;
+
+public class KBCJavaProject {
+	static Scanner sc =new Scanner(System.in);
+	static int prize=0;
+	static int count=0;
+	static boolean b=true;
+	static boolean c=true;
+	
+	
+	static void Q1()
+	{
+		System.out.println("Q1)Which country has the 4th highest army personnel in the world? ");
+		System.out.println("1:India\t2:Russia\n3:North Korea\t4:United States of America");
+		System.out.println("You have two lifelines\n5:(50/50)\n6:Double Dip ");
+		System.out.println("Do you  want to use a lifeline?\nPress 7 for yes\nPress 8 for no");
+		int x =sc.nextInt();
+		if(x==7){
+			if(b==true){
+			System.out.println("Press 5 for (50/50)");}
+			if(c==true){
+			System.out.println("Press 6 for Double Dip");}
+			if(b==true || c==true){
+				int y=sc.nextInt();
+				if(y==5){
+					System.out.println("2:Russia\n3:North Korea");
+					b=false;
+					System.out.println("Select your answer");
+					int a=sc.nextInt();
+					if(a==3){
+						System.out.println("Congratulations!!!you have answered correctly:))),the correct answer is North Korea");
+						count++;
+						System.out.println("You have won 5000Rs.");
+						prize=prize+5000;
+					}
+					else{
+						System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+						System.exit(0);
+					}
+				}
+				else if(y==6){
+					c=false;
+					System.out.println("Select your first option");
+					int p=sc.nextInt();
+					System.out.println("Select your second option");
+					int q=sc.nextInt();
+					if(p==3||q==3){
+						System.out.println("Congratulations!!!you have answered correctly:)))");
+						count++;
+						System.out.println("You have won 5000Rs.");
+						prize=prize+5000;
+					}
+					else{
+						System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+						System.exit(0);
+					}
+				}	
+			}
+		}
+		else{
+			
+			System.out.println("Select your answer");
+			int a=sc.nextInt();
+			if(a==3){
+				System.out.println("Congratulations!!!you have answered correctly:))),the correct answer is North Korea");
+				count++;
+				System.out.println("You have won 5000Rs.");
+				prize=prize+5000;
+			}
+			else{
+				System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+				System.exit(0);
+			}
+		}
+	}
+	
+	static void Q2(){
+		System.out.println("Q2)Whre is Machu Pichu,one of the seven wonders of the world,is situated in which country? ");
+		System.out.println("1:Mexico\t2:Peru\n3:Indonesia\t4:Vietnam");
+		System.out.println("Do you  want to use a lifeline?\nPress 7 for yes\nPress 8 for no");
+		int x =sc.nextInt();
+		if(x==7){
+			if(b==true){
+			System.out.println("Press 5 for (50/50)");}
+			if(c==true){
+			System.out.println("Press 6 for Double Dip");}
+			if(b==true || c==true){
+				int y=sc.nextInt();
+				if(y==5){
+					System.out.println("2:Peru\n4:Vietnam");
+					b=false;
+					System.out.println("Select your answer");
+					int a=sc.nextInt();
+					if(a==2){
+						System.out.println("Congratulations!!!you have answered correctly:))),the correct answer is Peru");
+						count++;
+						System.out.println("You have won 10000Rs.");
+						prize=prize+10000;
+					}
+					else{
+						System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+						System.exit(0);
+					}
+				}
+				else if(y==6){
+					c=false;
+					System.out.println("Select your first option");
+					int p=sc.nextInt();
+					System.out.println("Select your second option");
+					int q=sc.nextInt();
+					if(p==3||q==3){
+						System.out.println("Congratulations!!!you have answered correctly:))),the coorect answer is Peru");
+						count++;
+						System.out.println("You have won 10000Rs.");
+						prize=prize+10000;
+					}
+					else{
+						System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+						System.exit(0);
+					}
+				}	
+			}
+		}
+		else{
+			
+			System.out.println("Select your answer");
+			int a=sc.nextInt();
+			if(a==2){
+				System.out.println("Congratulations!!!you have answered correctly:))),the correct answer is Peru");
+				count++;
+				System.out.println("You have won 10000Rs.");
+				prize=prize+10000;
+			}
+			else{
+				System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+				System.exit(0);
+			}
+		}
+		
+	}
+	
+	static void Q3(){
+		System.out.println("Q3)Who is the first Indian woman to win an Asian Games gold in 400 m run? ");
+		System.out.println("1:Kamaljit Sandhu\t2:P.T.Usha\n3:M.L.Valsamma\t4:K.Malleshwari");
+		System.out.println("Do you  want to use a lifeline?\nPress 7 for yes\nPress 8 for no");
+		int x =sc.nextInt();
+		if(x==7){
+			if(b==true){
+			System.out.println("Press 5 for (50/50)");}
+			if(c==true){
+			System.out.println("Press 6 for Double Dip");}
+			if(b==true || c==true){
+				int y=sc.nextInt();
+				if(y==5){
+					System.out.println("1:Kamaljit Sandhu\n3:M.L.Valsamma");
+					b=false;
+					System.out.println("Select your answer");
+					int a=sc.nextInt();
+					if(a==1){
+						System.out.println("Congratulations!!!you have answered correctly:))),the correct answer is Kamaljit Sandhu");
+						count++;
+						System.out.println("You have won 20000Rs.");
+						prize=prize+20000;
+					}
+					else{
+						System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+						System.exit(0);
+					}
+				}
+				else if(y==6){
+					c=false;
+					System.out.println("Select your first option");
+					int p=sc.nextInt();
+					System.out.println("Select your second option");
+					int q=sc.nextInt();
+					if(p==3||q==3){
+						System.out.println("Congratulations!!!you have answered correctly:))),the coorect answer is Kamaljit Sandhu");
+						count++;
+						System.out.println("You have won 20000Rs.");
+						prize=prize+20000;
+					}
+					else{
+						System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+						System.exit(0);
+					}
+				}	
+			}
+		}
+		else{
+			
+			System.out.println("Select your answer");
+			int a=sc.nextInt();
+			if(a==1){
+				System.out.println("Congratulations!!!you have answered correctly:))),the correct answer is Kamaljit Sandhu");
+				count++;
+				System.out.println("You have won 20000Rs.");
+				prize=prize+20000;
+			}
+			else{
+				System.out.println("Oops!!!Sorry you lost:(((Better luck next time");
+				System.exit(0);
+			}
+		}
+		
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Welcome to KBC");
+		Q1();
+		Q2();
+		Q3();
+		System.out.println("Thank  you for playing KBC");
+		System.out.println("you have won a prize amount of "+prize+" and have correctly answered"+count+" questions");
+
+	}
+
+}
